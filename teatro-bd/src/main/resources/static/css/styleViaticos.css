@@ -1,0 +1,105 @@
+body {
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    align-items: center;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitulo {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h5 {
+    font-size: 100px;
+    width: auto;
+    color: white;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion {
+    width: 100%;
+    padding: 0;
+    background-color: (120, 119, 123, 0.3);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5em;
+    box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
+}
+
+table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    width: 150px;
+}
+
+.viaticos {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.estudiante {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerTabla {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.estudiante {
+    margin-top: 20px;
+    width: 100%
+}
+
+.liquidacion {
+    margin: 20px;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- Este link me permite que los objetos de thymeleaf funcionen -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" />
+    <link type="text/css" rel="stylesheet" th:href="@{css/styleinscripcionEstudiantes.css}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 " crossorigin="anonymous " />
+    <title>TeatroUD</title>
+</head>
+
+<body>
+    <div class="container m-5">
+        <!-- El signo $ es para pasar variables -->
+        <!-- El @ es la ruta dónde se envía el formulario -->
+        <form th:action="@{/agregarEstudiante}" th:object="${estudiante}" method="post" class="formulario">
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <h3>Inscripción Estudiantes</h3>
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="text" id="primerNombre" class="form-control" placeholder="Primer Nombre" th:field="*{primerNombre}" />
+                        <!--ya sabe que se asigna a la variable nombre en el modelo-->
+                        <label class="form-label" for="primerNombre">Primer Nombre</label
+              >
+              <div th:if="${#fields.hasErrors('primerNombre')}" class="textoError" th:errors="*{primerNombre}"></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input
+                type="text"
+                id="segundoNombre"
+                class="form-control"
+                placeholder="Segundo Nombre"
+                th:field="*{segundoNombre}"
+              />
+              <label class="form-label" for="segundoNombre"
+                >Segundo Nombre</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input
+                type="text"
+                id="primerApellido"
+                class="form-control"
+                placeholder="Primer Apellido"
+                th:field="*{primerApellido}"
+              />
+              <!--ya sabe que se asigna a la variable nombre en el modelo-->
+              <label class="form-label" for="primerApellido"
+                >Primer Apellido</label
+              >
+              <div th:if="${#fields.hasErrors('primerApellido')}" class="textoError" th:errors="*{primerApellido}"></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input
+                type="text"
+                id="segundoApellido"
+                class="form-control"
+                placeholder="Segundo Apellido"
+                th:field="*{segundoApellido}"
+              />
+              <label class="form-label" for="segundoApellido"
+                >Segundo Apellido</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="number" id="codigo" class="form-control" placeholder="Código" th:field="*{codigo}"/>
+              <label class="form-label" for="codigo">Código</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-outline">
+                        <select class="form-select form-select-sm" id="carrera" aria-label=".form-select-sm example" aria-placeholder="Seleccione una opción" th:field="*{idCarrera}">
+                <option value="20" selected>INGENIERIA DE SISTEMAS</option>
+                <option value="120">ADMINISTRACIÓN AMBIENTAL</option>
+                <option value="121">ADMINISTRACIÓDEPORTIVA</option>
+                <option value="122">ARCHIVISTA Y GESTION DE LA INFORMACIÓN DIGITAL</option>
+                <option value="123">ARTE DANZARIO</option>
+                <option value="124">ARTES ESCENICAS</option>
+                <option value="125">ARTES MUSICALES</option>
+                <option value="126">ARTES PLASTICAS Y VISUALES</option>
+                <option value="127">BIOLOGÍA</option>
+                <option value="128">COMUNICACIÓN SOCIAL Y PERIODISMO</option>
+                <option value="129">FISICA</option>
+                <option value="130">INGENIERIA AMBIENTAL</option>
+                <option value="25">INGENIERIA CATASTRAL Y GEODESIA</option>
+                <option value="26">INGENIERIA CIVIL</option>
+                <option value="5">INGENIERIA ELECTRONICA</option>
+                <option value="7">INGENIERIA ELECTRICA</option>
+                <option value="131">INGENIERIA DE CONTROL Y AUTOMATIZACIÓN</option>
+                <option value="132">INGENIERIA DE TELECOMUNICACIONES</option>
+                <option value="133">INGENIERIA DE TELEMATICA</option>
+                <option value="134">INGENIERIA FORESTAL</option>
+                <option value="15">INGENIERIA INDUSTRIAL</option>
+                <option value="135">INGENIERIA MECANICA</option>
+                <option value="136">INGENIERIA SANITARIA</option>
+                <option value="137">INGENIERIA TOPOGRAFICA</option>
+                <option value="138">LICENCIATURA EN BIOLOGÍA</option>
+                <option value="139">LICENCIATURA EN CIENCIAS SOCIALES</option>
+                <option value="140">LICENCIATURA EN EDUCACIÓN ARTISTICA</option>
+                <option value="141">LICENCIATURA EN EDUCACIÓN INFANTIL</option>
+                <option value="142">LICENCIATURA EN FISICA</option>
+                <option value="143">LICENCIATURA EN HUMANIDADES Y LENGUA CASTELLANA</option>
+                <option value="144">LICENCIATURA EN LENGUAS EXTRANJERAS</option>
+                <option value="145">LICENCIATURA EN MATEMÁTICAS</option>
+                <option value="146">LICENCIATURA EN QUIMICA</option>
+                <option value="147">MATEMÁTICAS</option>
+                <option value="148">QUIMICA</option>
+                <option value="149">TECNOLOGÍA EN CONSTRUCCIONES CIVILES</option>
+                <option value="150">TECNOLOGÍA EN ELECTRICIDAD MEDIA Y BAJA TENSIÓN</option>
+                <option value="151">TECNOLOGÍA EN ELECTRONICA INDUSTRIAL</option>
+                <option value="152">TECNOLOGÍA EN GESTION AMBIENTAL Y SERVICIOS PUBLICOS</option>
+                <option value="153">TECNOLOGÍA EN GESTION DE LA PRODUCCIÓN INDUSTRIAL</option>
+                <option value="154">TECNOLOGÍA EN LEVANTAMIENTOS TOPOGRAFICOS</option>
+                <option value="155">TECNOLOGÍA EN MECANICA INDUSTRIAL</option>
+                <option value="156">TECNOLOGÍA EN SANEAMIENTO AMBIENTAL</option>
+                <option value="157">TECNOLOGÍA EN SISTEMATIZACIÓN DE DATOS</option>
+              </select>
+                        <label class="form-label" for="carrera">Seleccione una carrera</label>
+                        <div th:if="${#fields.hasErrors('idCarrera')}" class="textoError" th:errors="*{idCarrera}"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="form-outline">
+                        <select class="form-select form-select-sm" id="tipoDocumento" aria-label=".form-select-sm example" aria-placeholder="Seleccione una opción" th:field="*{idTipoDocumento}">
+                <option value="CC" selected>CEDULA DE CIUDADANIA</option>
+                <option value="CE">CEDULA DE EXTRANJERIA</option>
+                <option value="NIP">NUMERO DE IDENTIFICACION PERSONAL</option>
+                <option value="NIT">NUMERO DE IDENTIFICACION TRIBUTARIA</option>
+                <option value="TI">TARJETA DE IDENTIDAD</option>
+                <option value="PAP">PASAPORTE</option>
+              </select>
+                        <label class="form-label" for="tipoDocumento">Seleccione un tipo de documento</label
+              >
+              <div th:if="${#fields.hasErrors('idTipoDocumento')}" class="textoError" th:errors="*{idTipoDocumento}"></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input
+                type="number"
+                id="numeroDocumento"
+                class="form-control"
+                placeholder="Número de documento"
+                th:field="*{numeroDocumento}"
+              />
+              <label class="form-label" for="numeroDocumento"
+                >Número de documento</label
+              >
+              <div th:if="${#fields.hasErrors('numeroDocumento')}" class="textoError" th:errors="*{numeroDocumento}"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+                <input type="date" id="fechaNacimiento" class="form-control" th:field="*{fechaNacimiento}" />
+                <label class="form-label" for="fechaNacimiento">Fecha Nacimiento</label>
+                        <div th:if="${#fields.hasErrors('fechaNacimiento')}" class="textoError" th:errors="*{fechaNacimiento}"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-outline">
+                        <input type="email" id="correo" class="form-control" placeholder="Correo" th:field="*{mail}" />
+                        <label class="form-label" for="correo">Correo</label>
+                        <div th:if="${#fields.hasErrors('mail')}" class="textoError" th:errors="*{mail}"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <button type="submit" class="btn btn-primary btn-block mb-4">
+          Confirmar
+        </button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+</body>
+
+</html>

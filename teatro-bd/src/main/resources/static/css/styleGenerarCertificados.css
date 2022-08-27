@@ -1,0 +1,164 @@
+body {
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    align-items: center;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitulo {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h5 {
+    font-size: 100px;
+    width: auto;
+    color: white;
+}
+
+.tituloSeccion {
+    margin: 20px;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0;
+    margin-top: 2%;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion {
+    width: 45%;
+    margin-left: 10px;
+    height: 380px;
+    margin-right: 10px;
+    margin-top: 20px;
+    background-color: (120, 119, 123, 0.3);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5em;
+    box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
+}
+
+.seccion2 {
+    width: 45%;
+    margin-left: 10px;
+    height: 380px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: (120, 119, 123, 0.3);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5em;
+    box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
+}
+
+.regresar {
+    margin: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonRegresar {
+    width: 80%;
+    background-color: (120, 119, 123, 0.3);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5em;
+    box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
+}
+
+.regresar a {
+    margin-top: 30px;
+    width: 200px;
+}
+
+.line {
+    width: 100%;
+}
+
+.col {
+    width: 100%;
+}
+
+button {
+    width: 150px;
+    font-weight: bold;
+}
+
+a {
+    margin-top: 100px;
+    width: 200px;
+    height: 40px;
+}
+
+label {
+    width: auto;
+    color: aliceblue;
+}
+
+form {
+    width: 60%;
+}
+
+select,
+input {
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 150px;
+}
+
+.boton2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton1 button {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 40px;
+}
